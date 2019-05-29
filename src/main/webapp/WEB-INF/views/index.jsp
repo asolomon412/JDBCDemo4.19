@@ -18,6 +18,8 @@
 		 <td>Name</td>
 		 <td>Category</td>
 		 <td>Description</td>
+		 <td>Update</td>
+		 <td>Delete</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -26,6 +28,8 @@
 		<td>${item.name }</td>
 		 <td>${item.category }</td>
 		 <td>${item.description }</td>
+		 <td><a href="update-form?id=${item.id }">Update</a></td>
+		 <td><a href="delete?id=${item.id }">Delete</a></td>
 	
 	</tr>
 	</c:forEach>

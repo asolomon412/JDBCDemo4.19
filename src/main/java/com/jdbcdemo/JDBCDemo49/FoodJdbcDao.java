@@ -21,5 +21,15 @@ public class FoodJdbcDao {
 		String addQuery = "insert into food(name, category, description) values(?,?,?)";
 		return jdbcTemplate.update(addQuery, name, category, description);
 	}
+	
+	public int updateFood(Food food) {
+		String updateQuery = "update food set name=?, category = ?, description= ? where id = ?";
+		return jdbcTemplate.update(updateQuery, food.getName(), food.getCategory(), food.getDescription(), food.getId());
+	}
+	
+	public int deleteFood(int id) {
+		String deleteQuery = "delete from food where id = ?";
+		return jdbcTemplate.update(deleteQuery, id);
+	}
 
 }
